@@ -4,14 +4,14 @@ build-backend = "hatchling.build"
 
 [project]
 name = "fitkit"
-version = "0.1.1"
+version = "0.1.2"
 description = "Parametric fit-test primitives: printed gauges for measuring real objects"
 requires-python = ">=3.10"
 # CadKit is fetched from its public, immutable release tag so Fitkit has no
 # dependency on a sibling checkout or a machine-specific CAD environment.
 dependencies = [
   "cadquery>=2.8,<2.9",
-  "cadkit @ git+https://github.com/benredrew/cadkit.git@v0.1.1",
+  "cadkit @ git+https://github.com/benredrew/cadkit.git@v0.1.2",
 ]
 
 [project.scripts]

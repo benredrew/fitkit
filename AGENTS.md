@@ -30,7 +30,7 @@ uv venv --python 3.12 .venv
 uv pip install --python .venv/bin/python -e .
 ```
 
-The install fetches CadKit from its public `v0.1.1` tag and resolves CadQuery
+The install fetches CadKit from its public `v0.1.2` tag and resolves CadQuery
 2.8.x. It needs no Aquarium, Oil Shelf, sibling checkout, shared venv, or
 machine-specific path. The install creates the `fit-test` command.
 
