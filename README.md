@@ -45,6 +45,24 @@ Wall thickness is a parameter because it changes what the ring *measures*: a
 thin ring flexes into a bore a rigid part would not enter, and reports a fit
 the real part won't reproduce. Compare readings only at the same wall.
 
+## Install
+
+Fitkit brings in the compatible, tagged CadKit release automatically. It does
+not need Aquarium, Oil Shelf, or any sibling project checkout:
+
+```bash
+git clone https://github.com/benredrew/fitkit.git
+cd fitkit
+uv venv --python 3.12 .venv
+uv pip install --python .venv/bin/python -e .
+```
+
+Then make a gauge:
+
+```bash
+.venv/bin/fit-test cylinder 112
+```
+
 ## Slicing
 
 `fit-test` stops at the STEP file and prints the slicing command rather than
@@ -54,5 +72,6 @@ two places.
 
 ## Built on
 
-[`cadkit`](https://github.com/benredrew/cadkit) — engraving, solid and
-printability checks, drawing sheets.
+[`cadkit`](https://github.com/benredrew/cadkit) `v0.1.1` — engraving, solid and
+printability checks, drawing sheets. The dependency is pinned to that tag so a
+Fitkit install is independent of your local projects.

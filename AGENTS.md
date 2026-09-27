@@ -26,12 +26,13 @@ Treat it as one. The obligations that follow are not style:
 ## Installing
 
 ```bash
-VIRTUAL_ENV=~/Projects/Aquarium/.venv uv pip install -e ~/Projects/fitkit --no-deps
+uv venv --python 3.12 .venv
+uv pip install --python .venv/bin/python -e .
 ```
 
-`--no-deps` always: cadquery and cadkit are declared because they are required,
-but the CAD environment pins cadquery and installing a primitive library must
-not be able to move it. The install creates the `fit-test` command.
+The install fetches CadKit from its public `v0.1.1` tag and resolves CadQuery
+2.8.x. It needs no Aquarium, Oil Shelf, sibling checkout, shared venv, or
+machine-specific path. The install creates the `fit-test` command.
 
 ## Layout
 
