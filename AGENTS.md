@@ -23,6 +23,16 @@ Treat it as one. The obligations that follow are not style:
   reading in the aquarium project's print log was taken at 2mm; changing it
   invalidates comparison against that history.
 
+## Installing
+
+```bash
+VIRTUAL_ENV=~/Projects/Aquarium/.venv uv pip install -e ~/Projects/fitkit --no-deps
+```
+
+`--no-deps` always: cadquery and cadkit are declared because they are required,
+but the CAD environment pins cadquery and installing a primitive library must
+not be able to move it. The install creates the `fit-test` command.
+
 ## Layout
 
 One primitive per module, exposing `build()` returning a solid, plus
