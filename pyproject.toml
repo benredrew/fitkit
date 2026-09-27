@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fitkit"
+version = "0.1.0"
+description = "Parametric fit-test primitives: printed gauges for measuring real objects"
+requires-python = ">=3.10"
+# cadquery comes from the host CAD environment; cadkit supplies engraving,
+# checking and drawing sheets. Neither is installed by this package.
+dependencies = ["cadquery>=2.8", "cadkit"]
+
+[project.scripts]
+fit-test = "fitkit.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/fitkit"]
